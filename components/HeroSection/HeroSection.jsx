@@ -1,4 +1,5 @@
 import Subtitle from "../subtitle";
+import Link from "next/link";
 const HeroSection = () => {
   return (
     <>
@@ -20,7 +21,11 @@ const HeroSection = () => {
             storytelling? Join The Journey Capturer community and embark on
             unforgettable trips, all at no cost.
           </p>
-          <button mt-12>Register Now </button>
+          <Link href="/register">
+            <button className="mt-12 bg-[#FAA935] p-3 rounded-3xl">
+              Register Now →
+            </button>
+          </Link>
         </div>
         <div className="w-3/5">
           <div className="p-16 flex gap-5 ">

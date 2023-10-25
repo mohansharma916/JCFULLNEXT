@@ -63,22 +63,22 @@ const UpcomingTripsData = [
     Triptitle: "Vietnam 8 Days Trip WIth FLight",
     Dates: "14 Oct, 24 Oct, 29 Oct",
   },
-  //   {
-  //     id: "Nagaland",
-  //     TripPhoto: "/media/manali.jpeg",
-  //     FromLocation: "Kolkata",
-  //     Duration: "3N/4D",
-  //     Triptitle: "Vietnam 8 Days Trip WIth FLight",
-  //     Dates: "14 Oct, 24 Oct, 29 Oct",
-  //   },
-  //   {
-  //     id: "Nagaland",
-  //     TripPhoto: "/media/manali.jpeg",
-  //     FromLocation: "Kolkata",
-  //     Duration: "3N/4D",
-  //     Triptitle: "Vietnam 8 Days Trip WIth FLight",
-  //     Dates: "14 Oct, 24 Oct, 29 Oct",
-  //   },
+  {
+    id: "Nagaland",
+    TripPhoto: "/media/manali.jpeg",
+    FromLocation: "Kolkata",
+    Duration: "3N/4D",
+    Triptitle: "Vietnam 8 Days Trip WIth FLight",
+    Dates: "14 Oct, 24 Oct, 29 Oct",
+  },
+  {
+    id: "Nagaland",
+    TripPhoto: "/media/manali.jpeg",
+    FromLocation: "Kolkata",
+    Duration: "3N/4D",
+    Triptitle: "Vietnam 8 Days Trip WIth FLight",
+    Dates: "14 Oct, 24 Oct, 29 Oct",
+  },
 ];
 
 export default UpcomingTripsData;

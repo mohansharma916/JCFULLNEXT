@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="bg-white px-28">
+    <div className="bg-white px-16">
       <HeroSection />
       <Services />
       <Explore />

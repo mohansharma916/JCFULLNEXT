@@ -1,11 +1,9 @@
-import Link from "next/link";
-
 export default () => {
   return (
     <main className="w-full flex">
       <div className="relative flex-1 hidden items-center justify-center h-screen bg-gray-900 lg:flex">
         <div className="relative z-10 w-full max-w-md">
-          {/* <img src="https://floatui.com/logo-dark.svg" width={150} /> */}
+          <img src="https://floatui.com/logo-dark.svg" width={150} />
           <div className=" mt-16 space-y-3">
             <h3 className="text-white text-3xl font-bold">
               Start growing your business quickly
@@ -36,7 +34,7 @@ export default () => {
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
               <p className="text-sm text-gray-400 font-medium translate-x-5">
-                Join 5,00+ users
+                Join 5.000+ users
               </p>
             </div>
           </div>
@@ -60,20 +58,28 @@ export default () => {
             />
             <div className="mt-5 space-y-2">
               <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
-                Login
+                Sign up
               </h3>
               <p className="">
-                Dont have an account?{" "}
-                <Link
+                Already have an account?{" "}
+                <a
                   href="javascript:void(0)"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
-                  Sign up
-                </Link>
+                  Log in
+                </a>
               </p>
             </div>
           </div>
           <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+            <div>
+              <label className="font-medium">Name</label>
+              <input
+                type="text"
+                required
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </div>
             <div>
               <label className="font-medium">Email</label>
               <input
@@ -82,7 +88,14 @@ export default () => {
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
-
+            <div>
+              <label className="font-medium">Mobile Number</label>
+              <input
+                type="number"
+                required
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </div>
             <div>
               <label className="font-medium">Password</label>
               <input
@@ -91,9 +104,50 @@ export default () => {
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
-
+            <div className="relative max-w-xl mx-auto sm:text-center">
+              <p className="text-gray-800 text-xl font-semibold sm:text-xl">
+                Membership Fee (One Time Only - Lifetime Access)
+              </p>
+              <div className="mt-3 max-w-xl">
+                <form className="w-full max-w-lg mx-auto bg-white shadow-md rounded px-2 pt-6 pb-8 mb-4">
+                  <div>
+                    <div className="flex items-center ">
+                      <p>
+                        Pay Via UPI App <sup>*</sup> : (click Here → )
+                      </p>
+                      <div className="flex border-inherit gap-2 ml-6">
+                        <a href="upi://pay?pa=mohansharma916@okhdfcbank&cu=INR&am=999">
+                          <img
+                            className=""
+                            src="/media/google-pay.svg"
+                            width={40}
+                            height={40}
+                            alt="google-pay-Icon"
+                          />
+                        </a>
+                        <a href="upi://pay?pa=mohansharma916@okhdfcbank&cu=INR&am=99">
+                          <img
+                            className=""
+                            src="/media/phone-pay.png"
+                            width={40}
+                            height={40}
+                            alt="phone-pay-Icon"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <p className=" text-slate-400 text-[8px]">
+                      {" "}
+                      <sup>*</sup>
+                      To Avoid Transaction Fee Of Payment Platform We are
+                      directly Receiving Payment Throygh UPI{" "}
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
             <button className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
-              Login
+              Create account
             </button>
           </form>
         </div>
