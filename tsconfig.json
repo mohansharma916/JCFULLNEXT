@@ -17,6 +17,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/subtitle.jsx", "pages/auth/register.jsx", "lib/auth.js", "graphql/resolvers.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/subtitle.jsx", "pages/auth/register.jsx", "lib/auth.js", "graphql/resolvers.js", "components/Header/index.tsx"],
   "exclude": ["node_modules"]
 }

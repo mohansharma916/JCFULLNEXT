@@ -1,5 +1,6 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+
 import Link from "next/link";
 import {
   ArrowPathIcon,
@@ -15,6 +16,9 @@ import {
   PhoneIcon,
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
+import { useAppSelector } from "@/src/hooks";
+import { useQuery } from "@apollo/client";
+import { GetUser } from "@/src/apollo/queries/auth";
 
 const products = [
   {
@@ -58,6 +62,9 @@ function classNames(...classes) {
 }
 
 export default function Header() {
+  const userResp = useQuery(GetUser);
+
+  // console.log("user", userResp.data.me);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -179,23 +186,27 @@ export default function Header() {
             className="text-sm font-semibold leading-6 text-gray-900"
           ></Link>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            className="text-sm font-semibold leading-6 hover:border-2 p-2 hover:rounded-2xl text-gray-900 mr-4 bg-transparent hover:bg-[#FAA935]"
-            href="/auth/login"
-          >
-            {" "}
-            Log in <span aria-hidden="true"></span>
-          </Link>
+        {userResp?.data?.me ? (
+          <></>
+        ) : (
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <Link
+              className="text-sm font-semibold leading-6 hover:border-2 p-2 hover:rounded-2xl text-gray-900 mr-4 bg-transparent hover:bg-[#FAA935]"
+              href="/auth/login"
+            >
+              {" "}
+              Log in <span aria-hidden="true"></span>
+            </Link>
 
-          <Link
-            className="text-sm font-semibold leading-6 hover:border-2 p-2 hover:rounded-2xl text-gray-900 mr-4 bg-transparent hover:bg-[#FAA935]"
-            href="/auth/register"
-          >
-            {" "}
-            Register Here <span aria-hidden="true"></span>
-          </Link>
-        </div>
+            <Link
+              className="text-sm font-semibold leading-6 hover:border-2 p-2 hover:rounded-2xl text-gray-900 mr-4 bg-transparent hover:bg-[#FAA935]"
+              href="/auth/register"
+            >
+              {" "}
+              Register Here <span aria-hidden="true"></span>
+            </Link>
+          </div>
+        )}
       </nav>
       <Dialog
         as="div"
@@ -279,6 +290,7 @@ export default function Header() {
                   Blogs
                 </Link>
               </div>
+
               <div className="py-6">
                 <Link
                   href="/auth/login"

@@ -1,74 +1,40 @@
-// import { GET_AGENCY_CODE, GetUser } from "@/apollo/queries/auth";
-// import {
-//   GET_NUMBERS,
-//   GET_PROJECT_AMOUNTS,
-//   GET_RLI,
-// } from "@/apollo/queries/updateUser";
-// import { useAppDispatch } from "@/hooks";
-// import {
-//   setNumbers,
-//   setTotalAgraAmount,
-//   setTotalHajipurAmount,
-// } from "@/state/slice/allUsersSlice";
-// import { setAgencyCode, setOrUpdateUser } from "@/state/slice/userSlice";
+import { GetUser } from "../src/apollo/queries/auth";
+import { useAppDispatch } from "../src/hooks";
 import { useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const Router = ({ children }) => {
   const router = useRouter();
-  //   const userResp = useQuery(GetUser);
-  //   const RamaLegalIT = useQuery(GET_RLI);
-  //   const allNumbers = useQuery(GET_NUMBERS);
-  //   const allProjectAmounts = useQuery(GET_PROJECT_AMOUNTS);
-  //   const agencyCode = useQuery(GET_AGENCY_CODE, {
-  //     variables: { userID: userResp?.data?.me.id },
-  //   });
+  const userResp = useQuery(GetUser);
 
-  //   const dispatch = useAppDispatch();
-  //   if (allProjectAmounts?.data?.getProjectsPayment) {
-  //     dispatch(
-  //       setTotalHajipurAmount(
-  //         allProjectAmounts?.data?.getProjectsPayment.ProjectHajipurAmountReceived
-  //       )
-  //     );
-  //     dispatch(
-  //       setTotalAgraAmount(
-  //         allProjectAmounts?.data?.getProjectsPayment.ProjectAgraAmountReceived
-  //       )
-  //     );
-  //   }
-  //   if (allNumbers?.data?.getAllUsersCount) {
-  //     dispatch(setNumbers(allNumbers?.data?.getAllUsersCount));
-  //   }
-  //   if (agencyCode?.data?.kycAgency.agencyCode) {
-  //     dispatch(setAgencyCode(agencyCode.data.kycAgency.agencyCode));
-  //   }
+  const dispatch = useAppDispatch();
 
   const [isLoading, setLoading] = useState(true);
-  /*  const gotData = useSelector((state: any) => state.allUsers.gotData);
+  const gotData = useSelector((state: any) => state.userResp);
   useEffect(() => {
     if (!gotData) {
-      router.replace('/dashboard');
+      router.replace("/");
     }
-  }, []); */
+  }, []);
   const [isAuthenticated, setAuthenticated] = useState(false);
 
   const [isAuthFinished, setAuthFinished] = useState(false);
 
   const loadUser = async () => {
     try {
-      //   const resp = await userResp.refetch();
-      // console.log('resp', resp);
-      //   return resp.data.me;
+      const resp = await userResp.refetch();
+      // console.log("resp", resp);
+      return resp.data.me;
     } catch (err) {
-      //   if (userResp.error && userResp.error.graphQLErrors) {
-      //     for (let error of userResp.error.graphQLErrors) {
-      //       if (error.extensions.code === "UNAUTHENTICATED") {
-      //         localStorage.clear();
-      //       }
-      //     }
-      //   }
+      if (userResp.error && userResp.error.graphQLErrors) {
+        for (let error of userResp.error.graphQLErrors) {
+          if (error.extensions.code === "UNAUTHENTICATED") {
+            localStorage.clear();
+          }
+        }
+      }
     }
     return null;
   };
@@ -78,11 +44,11 @@ const Router = ({ children }) => {
       setLoading(false);
     }
     const user = await loadUser();
-    // if (user) {
-    //   setAuthenticated(true);
+    if (user) {
+      setAuthenticated(true);
 
-    //   dispatch(setOrUpdateUser(user));
-    // }
+      // dispatch(setOrUpdateUser(user));
+    }
     setLoading(false);
   };
 
@@ -96,13 +62,13 @@ const Router = ({ children }) => {
       router.pathname.toLowerCase() !== "/auth/login".toLowerCase() &&
       router.pathname.toLowerCase() !== "/auth/signup".toLowerCase()
     ) {
-      await router.replace("/auth/login");
+      await router.replace("/");
     } else if (
       isAuthenticated &&
       (router.pathname.toLowerCase() == "/auth/login".toLowerCase() ||
         router.pathname.toLowerCase() == "/auth/signup".toLowerCase())
     ) {
-      await router.replace("/dashboard");
+      await router.replace("/");
     }
     setAuthFinished(true);
   };

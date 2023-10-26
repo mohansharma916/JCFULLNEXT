@@ -17,7 +17,7 @@ const httpLink = createHttpLink({
   uri: process.env.NEXT_PUBLIC_SERVER_URL,
 });
 
-let ACCESSTOKEN;
+let ACCESSTOKEN: string | null;
 export const getApolloClient = () => {
   if (typeof window !== "undefined") {
     ACCESSTOKEN = localStorage.getItem("accessToken");

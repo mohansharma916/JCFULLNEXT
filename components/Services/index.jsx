@@ -38,7 +38,7 @@ const Services = () => {
           </h2>
           <p>We offer our best services</p>
         </div>
-        <div className="flex w-9/12">
+        <div className="flex w-9/12 md:flex-col md:flex sm:flex-col md:w-full">
           {ServiceData.map((data) => (
             <ServiceCard
               key={data.id}

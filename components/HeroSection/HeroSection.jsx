@@ -1,6 +1,9 @@
 import Subtitle from "../subtitle";
 import Link from "next/link";
+import { useAppSelector } from "@/src/hooks";
 const HeroSection = () => {
+  const user = useAppSelector((state) => state.user.data);
+
   return (
     <>
       <div className="flex">

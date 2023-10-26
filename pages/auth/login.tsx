@@ -1,6 +1,41 @@
+import { LOGIN } from "@/src/apollo/queries/auth";
+import { useMutation } from "@apollo/client";
 import Link from "next/link";
+import router from "next/router";
+import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export default () => {
+  const [login] = useMutation(LOGIN);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // const handleSubmit = () => {};
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    // const isValid = validateForm();
+    // if (isValid) {
+    try {
+      // console.log(email, password);
+      const resp = await login({
+        variables: {
+          email,
+          password,
+        },
+      });
+      const data = resp.data.login;
+      console.log("dATA", data);
+      for (let key of Object.keys(data)) {
+        localStorage.setItem(key, data[key]);
+      }
+      router.reload();
+    } catch (err: any) {
+      toast.error(err.message);
+    }
+    // }
+  };
+
   return (
     <main className="w-full flex">
       <div className="relative flex-1 hidden items-center justify-center h-screen bg-gray-900 lg:flex">
@@ -65,7 +100,7 @@ export default () => {
               <p className="">
                 Dont have an account?{" "}
                 <Link
-                  href="javascript:void(0)"
+                  href="/auth/register"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
                   Sign up
@@ -73,12 +108,13 @@ export default () => {
               </p>
             </div>
           </div>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label className="font-medium">Email</label>
               <input
                 type="email"
                 required
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
@@ -88,16 +124,21 @@ export default () => {
               <input
                 type="password"
                 required
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
 
-            <button className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
+            <button
+              type="submit"
+              className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+            >
               Login
             </button>
           </form>
         </div>
       </div>
+      <Toaster />
     </main>
   );
 };

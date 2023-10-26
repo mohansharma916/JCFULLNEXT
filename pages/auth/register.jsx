@@ -1,14 +1,52 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { SIGNUP } from "@/src/apollo/queries/auth";
+import { useLazyQuery, useMutation } from "@apollo/client";
+import Link from "next/link";
+import toast, { Toaster } from "react-hot-toast";
 export default () => {
-  const [username, setUsername] = useState("");
+  const router = useRouter();
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
+  const [signup] = useMutation(SIGNUP);
 
-  function onSubmit(e) {
+  const validateForm = () => {
+    if (!password || password.length < 8) {
+      toast.error("Password is not valid!");
+      return;
+    }
+    return true;
+  };
+
+  const onSubmit = async (e) => {
     e.preventDefault();
-  }
+    const isValid = validateForm();
+    if (isValid) {
+      try {
+        const resp = await signup({
+          variables: {
+            email,
+            password,
+            mobileNumber,
+            name,
+          },
+        });
+        const data = resp.data.signup;
+        for (let key of Object.keys(data)) {
+          localStorage.setItem(key, data[key]);
+        }
+        router.reload();
+      } catch (err) {
+        toast.error(err.message);
+      }
+    }
+  };
+
+  useEffect(() => {
+    router.reload();
+  }, []);
 
   return (
     <main className="w-full flex">
@@ -73,12 +111,12 @@ export default () => {
               </h3>
               <p className="">
                 Already have an account?{" "}
-                <a
-                  href="javascript:void(0)"
+                <Link
+                  href="/auth/login"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
                   Log in
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -88,7 +126,7 @@ export default () => {
               <input
                 type="text"
                 required
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
@@ -170,6 +208,7 @@ export default () => {
           </form>
         </div>
       </div>
+      <Toaster />
     </main>
   );
 };
