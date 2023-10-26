@@ -182,7 +182,7 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
             className="text-sm font-semibold leading-6 hover:border-2 p-2 hover:rounded-2xl text-gray-900 mr-4 bg-transparent hover:bg-[#FAA935]"
-            href="/login"
+            href="/auth/login"
           >
             {" "}
             Log in <span aria-hidden="true"></span>
@@ -190,7 +190,7 @@ export default function Header() {
 
           <Link
             className="text-sm font-semibold leading-6 hover:border-2 p-2 hover:rounded-2xl text-gray-900 mr-4 bg-transparent hover:bg-[#FAA935]"
-            href="/register"
+            href="/auth/register"
           >
             {" "}
             Register Here <span aria-hidden="true"></span>
@@ -281,7 +281,7 @@ export default function Header() {
               </div>
               <div className="py-6">
                 <Link
-                  href="/login"
+                  href="/auth/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Log in
@@ -289,7 +289,7 @@ export default function Header() {
               </div>
               <div className="py-6">
                 <Link
-                  href="/register"
+                  href="/auth/register"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Register Now
