@@ -1,4 +1,15 @@
+import { useState } from "react";
+
 export default () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+
+  function onSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <main className="w-full flex">
       <div className="relative flex-1 hidden items-center justify-center h-screen bg-gray-900 lg:flex">
@@ -71,12 +82,13 @@ export default () => {
               </p>
             </div>
           </div>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+          <form onSubmit={onSubmit} className="space-y-5">
             <div>
               <label className="font-medium">Name</label>
               <input
                 type="text"
                 required
+                onChange={(e) => setUsername(e.target.value)}
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
@@ -85,6 +97,7 @@ export default () => {
               <input
                 type="email"
                 required
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
@@ -93,6 +106,7 @@ export default () => {
               <input
                 type="number"
                 required
+                onChange={(e) => setMobileNumber(e.target.value)}
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
@@ -101,6 +115,7 @@ export default () => {
               <input
                 type="password"
                 required
+                onChange={(e) => setPassword(e.target.value)}
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
@@ -146,7 +161,10 @@ export default () => {
                 </form>
               </div>
             </div>
-            <button className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
+            <button
+              type="submit"
+              className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+            >
               Create account
             </button>
           </form>
