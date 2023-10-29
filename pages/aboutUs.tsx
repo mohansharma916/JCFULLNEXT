@@ -1,7 +1,11 @@
+import Footer from "@/src/components/Footer";
+import Header from "@/src/components/Header";
+
 const About = () => {
   return (
     <>
-      <div className="bg-white px-20 py-10">
+      <Header />
+      <div className="bg-white px-20 py-10 2xs:px-2">
         <div>
           <h3 className="font-bold text-3xl pb-9 content-center flex justify-center">
             About Us
@@ -66,7 +70,7 @@ const About = () => {
             vlogging and photography, we've got you covered.
           </p>
         </div>
-        <div>
+        {/* <div>
           <h3 className="font-bold text-3xl py-9 flex justify-center">
             Content Creation and Collaboration
           </h3>
@@ -124,8 +128,9 @@ const About = () => {
             making it a win-win scenario for travelers, partners, and our
             platform.
           </p>
-        </div>
+        </div> */}
       </div>
+      <Footer />
     </>
   );
 };

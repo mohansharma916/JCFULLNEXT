@@ -44,22 +44,17 @@ export default () => {
     }
   };
 
-  useEffect(() => {
-    router.reload();
-  }, []);
-
   return (
-    <main className="w-full flex">
+    <main className="w-full bg-white flex">
       <div className="relative flex-1 hidden items-center justify-center h-screen bg-gray-900 lg:flex">
         <div className="relative z-10 w-full max-w-md">
           <img src="https://floatui.com/logo-dark.svg" width={150} />
           <div className=" mt-16 space-y-3">
             <h3 className="text-white text-3xl font-bold">
-              Start growing your business quickly
+              Start Travelling For Free
             </h3>
             <p className="text-gray-300">
-              Create an account and get access to all features for 30-days, No
-              credit card required.
+              Become a Member and Start Travelling For Free
             </p>
             <div className="flex items-center -space-x-2 overflow-hidden">
               <img
@@ -83,7 +78,7 @@ export default () => {
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
               <p className="text-sm text-gray-400 font-medium translate-x-5">
-                Join 5.000+ users
+                Join 500+ users
               </p>
             </div>
           </div>
@@ -97,7 +92,7 @@ export default () => {
           }}
         ></div>
       </div>
-      <div className="flex-1 flex items-center bg-white justify-center h-screen">
+      <div className="flex-1 flex items-center bg-white justify-center h-screen mt-5">
         <div className="w-full max-w-md space-y-8 px-4 bg-white text-gray-600 sm:px-0">
           <div className="">
             <img
@@ -120,7 +115,7 @@ export default () => {
               </p>
             </div>
           </div>
-          <form onSubmit={onSubmit} className="space-y-5">
+          <form onSubmit={onSubmit} className="space-t-5">
             <div>
               <label className="font-medium">Name</label>
               <input
@@ -159,7 +154,7 @@ export default () => {
             </div>
             <div className="relative max-w-xl mx-auto sm:text-center">
               <p className="text-gray-800 text-xl font-semibold sm:text-xl">
-                Membership Fee (One Time Only - Lifetime Access)
+                Membership Fee ₹ 999 (One Time Only - Lifetime Access)
               </p>
               <div className="mt-3 max-w-xl">
                 <form className="w-full max-w-lg mx-auto bg-white shadow-md rounded px-2 pt-6 pb-8 mb-4">
@@ -178,7 +173,7 @@ export default () => {
                             alt="google-pay-Icon"
                           />
                         </a>
-                        <a href="upi://pay?pa=mohansharma916@okhdfcbank&cu=INR&am=99">
+                        <a href="upi://pay?pa=mohansharma916@okhdfcbank&cu=INR&am=999">
                           <img
                             className=""
                             src="/media/phone-pay.png"

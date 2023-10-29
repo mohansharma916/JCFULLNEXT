@@ -1,0 +1,33 @@
+import React, { useState } from "react";
+import DateDetails from "./DateDetails";
+
+const DatesCosting = ({ content }) => {
+  const [selectedDate, setSelectedDates] = useState("");
+  const [selectedMonth, setSelectedMonth] = useState("");
+  const handleMonthClick = (month) => {
+    setSelectedMonth(month);
+  };
+  const handleDateClick = (dates) => {
+    setSelectedDates(dates);
+  };
+
+  return (
+    <div className="my-8">
+      <h4>Dates & Costing</h4>
+      <div className="flex gap-4">
+        {content.map((dd) => (
+          <p onClick={() => handleMonthClick(dd.month)}>{dd.month}</p>
+        ))}
+      </div>
+      <div>
+        {content
+          .find((monthData) => monthData.month === selectedMonth)
+          ?.dates.map((date) => (
+            <p>{date}</p>
+          ))}
+      </div>
+    </div>
+  );
+};
+
+export default DatesCosting;

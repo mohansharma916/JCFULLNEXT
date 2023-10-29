@@ -25,7 +25,7 @@ export default () => {
         },
       });
       const data = resp.data.login;
-      console.log("dATA", data);
+      // console.log("dATA", data);
       for (let key of Object.keys(data)) {
         localStorage.setItem(key, data[key]);
       }
@@ -42,13 +42,8 @@ export default () => {
         <div className="relative z-10 w-full max-w-md">
           {/* <img src="https://floatui.com/logo-dark.svg" width={150} /> */}
           <div className=" mt-16 space-y-3">
-            <h3 className="text-white text-3xl font-bold">
-              Start growing your business quickly
-            </h3>
-            <p className="text-gray-300">
-              Create an account and get access to all features for 30-days, No
-              credit card required.
-            </p>
+            <h3 className="text-white text-3xl font-bold">Welcome Back</h3>
+            <p className="text-gray-300">Lets Choose Your Trip & EnJoy</p>
             <div className="flex items-center -space-x-2 overflow-hidden">
               <img
                 src="https://randomuser.me/api/portraits/women/79.jpg"

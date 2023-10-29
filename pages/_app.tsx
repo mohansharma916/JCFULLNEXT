@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import Layout from "@/components/layout";
-import Router from "./Router";
+import Layout from "@/src/components/layout";
+import JCRouter from "./JCRouter";
 import { ApolloProvider } from "@apollo/client";
 import { getApolloClient } from "@/src/apollo";
 import { Provider } from "react-redux";
@@ -14,11 +14,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Provider store={store}>
         <ApolloProvider client={client}>
-          <Router>
+          <JCRouter>
             <Layout>
               <Component {...pageProps} />
             </Layout>
-          </Router>
+          </JCRouter>
         </ApolloProvider>
       </Provider>
     </>
