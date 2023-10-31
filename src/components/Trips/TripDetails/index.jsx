@@ -19,10 +19,13 @@ const Tripdetails = ({
   const [selectedItem, setSelectedItem] = useState(1);
   return (
     <>
-      <div className="px-4 mb-8 bg-white md:px-8">
+      <div
+        className="px-4 border-1 
+border-gray-800 my-8 shadow-2xl bg-white md:px-8"
+      >
         <ul
           role="tablist"
-          className=" hidden  max-w-screen-xl mx-auto px-2.5 items-center gap-x-3 overflow-x-auto text-sm bg-gray-50 rounded-lg lg:flex xl:flex md:flex sm:flex"
+          className=" hidden my-6  max-w-screen-xl mx-auto px-2.5 items-center gap-x-3 overflow-x-auto text-sm bg-gray-50 rounded-lg lg:flex xl:flex md:flex sm:flex"
         >
           {tabItems.map((item, idx) => (
             <li key={idx} className="py-2">

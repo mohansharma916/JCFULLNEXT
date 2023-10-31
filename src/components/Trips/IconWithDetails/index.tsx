@@ -21,7 +21,7 @@ const IconWithDetails = ({ duration, pickUpAndDrop, dates }) => {
 
   return (
     <>
-      <div className="bg-white flex ">
+      <div className="bg-white my-5 flex ">
         {showModal ? (
           <>
             <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">

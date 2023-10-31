@@ -31,7 +31,7 @@ const Services = () => {
 
   return (
     <>
-      <div className="flex 2xs:flex 2xs:flex-col  ">
+      <div className="flex 2xs:flex 2xs:flex-col mt-5 ">
         <div className="w-3/12 text-3xl font-medium 2xs:w-full 2xs:text-center 2xs:place-item-center">
           <h2 className="font-cursive inline-block text-[#ee6e6e] 2xs:text-4xl 2xs">
             What We Serve

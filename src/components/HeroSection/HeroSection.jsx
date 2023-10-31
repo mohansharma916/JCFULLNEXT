@@ -36,7 +36,7 @@ const HeroSection = () => {
         </div>
         <div className="w-3/5 2xs:w-full">
           <div className="p-16 flex gap-5 2xs:p-0 2xs:flex 2xs:flex-col  2xs:p-2 2xs:gap-0">
-            <div>
+            {/* <div>
               <video
                 width="177"
                 height="100"
@@ -49,34 +49,21 @@ const HeroSection = () => {
                 <source src="/media/travelVideo1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-            </div>
+            </div> */}
+            <img width={400} src="/media/pngwing.png" />
             <div>
               <video
-                width="200"
-                className="rounded-lg mt-10 2xs:hidden"
+                width="300"
+                className="rounded-lg 2xs:hidden"
                 playsInline={true}
                 autoPlay
                 loop
                 muted
               >
-                <source src="/media/main-video.mp4" type="video/mp4" />
+                <source src="/media/mainVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div></div>
-
-            <video
-              width="177"
-              height="100"
-              className="rounded-lg mt-20 2xs:w-full 2xs:mt-2"
-              playsInline={true}
-              autoPlay
-              loop
-              muted
-            >
-              <source src="/media/travelVideo2.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
           </div>
         </div>
       </div>

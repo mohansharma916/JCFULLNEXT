@@ -25,32 +25,10 @@ const Gallery = () => {
                   />
                 </div>
                 <div class="w-full flex justify-evenly p-1 md:p-2">
-                  {/* <video
-                  className="rounded-lg w-32 mr-5 h-auto mt-10 2xs:hidden"
-                  playsInline={true}
-                  autoPlay
-                  loop
-                  muted
-                >
-                  <source src="/media/gallery-video2.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
-                  {/* <video
-                  width="200"
-                  height="100"
-                  className="rounded-lg w-1/3 h-auto  mr-5 mt-10 2xs:hidden"
-                  playsInline={true}
-                  autoPlay
-                  loop
-                  muted
-                >
-                  <source src="/media/gallery-video1.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
                   <img
                     alt="gallery"
                     class="block h-full w-full rounded-lg object-cover object-center"
-                    src="/media/gallery-9.jpg"
+                    src="/media/gallery-4.jpg"
                   />
                 </div>
               </div>
@@ -86,39 +64,17 @@ const Gallery = () => {
                   <img
                     alt="gallery"
                     class="block h-full w-full rounded-lg object-cover object-center"
-                    src="/media/gallery-1.jpg"
+                    src="/media/gallery-7.jpg"
                   />
                 </div>
                 <div class="w-1/2 p-1 md:p-2">
                   <img
                     alt="gallery"
                     class="block h-full w-full rounded-lg object-cover object-center"
-                    src="/media/gallery-2.jpg"
+                    src="/media/gallery-8.jpg"
                   />
                 </div>
                 <div class="w-full flex justify-evenly p-1 md:p-2">
-                  {/* <video
-                  className="rounded-lg w-32 mr-5 h-auto mt-10 2xs:hidden"
-                  playsInline={true}
-                  autoPlay
-                  loop
-                  muted
-                >
-                  <source src="/media/gallery-video2.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
-                  {/* <video
-                  width="200"
-                  height="100"
-                  className="rounded-lg w-1/3 h-auto  mr-5 mt-10 2xs:hidden"
-                  playsInline={true}
-                  autoPlay
-                  loop
-                  muted
-                >
-                  <source src="/media/gallery-video1.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video> */}
                   <img
                     alt="gallery"
                     class="block h-full w-full rounded-lg object-cover object-center"

@@ -14,11 +14,11 @@ const JCRouter = ({ children }) => {
 
   const [isLoading, setLoading] = useState(true);
   const gotData = useSelector((state: any) => state.userResp);
-  useEffect(() => {
-    if (!gotData) {
-      router.replace("/");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!gotData) {
+  //     router.replace("/");
+  //   }
+  // }, []);
   const [isAuthenticated, setAuthenticated] = useState(false);
 
   const [isAuthFinished, setAuthFinished] = useState(false);

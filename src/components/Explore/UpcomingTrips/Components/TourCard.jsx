@@ -9,8 +9,8 @@ const TourCard = ({ tour }) => {
 
   return (
     <>
-      <div className="w-1/5 border border-neutral-500 bg-gray-50 rounded-2xl mr-4 mb-8 2xs:w-full 2xs:mx-2">
-        <div className=" w-1/5 h-20">
+      <div className="w-80 border border-neutral-500 bg-gray-50 rounded-2xl mr-4 mb-8 2xs:w-full 2xs:mx-2">
+        <div className="">
           <img
             src={TripPhoto}
             className="rounded-tl-2xl  w-full h-full rounded-tr-2xl"
@@ -38,7 +38,7 @@ const TourCard = ({ tour }) => {
           <div className="flex justify-center items-center">
             <Link href={`/trips/${id}`}>
               <button className="border-transparent border-2 bg-[#FAA935] rounded-sm  px-2 py-1 my-2 2xs:px-2 2xs:text-xs">
-                Book Now
+                View Details
               </button>
             </Link>
           </div>

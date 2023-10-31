@@ -27,7 +27,7 @@ const Footer = () => {
       label: "About",
       items: [
         {
-          href: "/terms&condition",
+          href: "/terms-of-service",
           name: "Terms & Condition",
         },
         // {
@@ -35,7 +35,7 @@ const Footer = () => {
         //   name: "License",
         // },
         {
-          href: "/privacyPolicy",
+          href: "/privacy-policy",
           name: "Privacy Policy",
         },
         {
@@ -48,19 +48,19 @@ const Footer = () => {
       label: "Explore",
       items: [
         {
-          href: "javascript:void()",
+          href: "#",
           name: "Showcase",
         },
         {
-          href: "javascript:void()",
+          href: "#",
           name: "Roadmap",
         },
+        // {
+        //   href: "javascript:void()",
+        //   name: "Languages",
+        // },
         {
-          href: "javascript:void()",
-          name: "Languages",
-        },
-        {
-          href: "javascript:void()",
+          href: "/blogs",
           name: "Blog",
         },
       ],
@@ -69,15 +69,15 @@ const Footer = () => {
       label: "Company",
       items: [
         {
-          href: "javascript:void()",
+          href: "#",
           name: "Partners",
         },
         {
-          href: "javascript:void()",
+          href: "#",
           name: "Team",
         },
         {
-          href: "javascript:void()",
+          href: "#",
           name: "Careers",
         },
       ],

@@ -13,7 +13,7 @@ const UpcomingTrips = () => {
           <h3 className="text-4xl flex justify-center items-center mb-3.5 font-semibold">
             Upcoming Trips
           </h3>
-          <p className="flex justify-center  items-center 2xs:text-center">
+          <p className="flex justify-center mb-5 items-center 2xs:text-center">
             We Curate The Best Experiences For You Based On Your Interests To
             Enjoy Over Weekend Get-aways Around Your City.
           </p>

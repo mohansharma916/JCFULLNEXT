@@ -26,34 +26,34 @@ const products = [
     description:
       "Relax on sunny shores, listen to the soothing waves, and play in the sand at beautiful beach spots.",
     href: "#",
-    icon: ChartPieIcon,
+    icon: "/media/sunset.png",
   },
   {
     name: "Mountains Trekking",
     description:
       "Hike through big, tall mountains and enjoy the great outdoors.",
     href: "#",
-    icon: CursorArrowRaysIcon,
+    icon: "/media/trekking.png",
   },
   {
     name: "Snow Mountains",
     description:
       "Have fun in the snow on tall mountains with activities like skiing and snowboarding.",
     href: "#",
-    icon: FingerPrintIcon,
+    icon: "/media/winter.png",
   },
   {
     name: "Temples",
     description: "Connect with third-party tools",
     href: "#",
-    icon: SquaresPlusIcon,
+    icon: "/media/temples.png",
   },
   {
     name: "Party Trips",
     description:
       "Go to places with lots of music and fun to dance, have a blast, and make memories with friends.",
     href: "#",
-    icon: ArrowPathIcon,
+    icon: "/media/dance.png",
   },
 ];
 const callsToAction = [
@@ -74,7 +74,6 @@ export default function Header() {
 
   // console.log("user", userResp.data.me);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  console.log("data", data);
 
   return (
     <header className="bg-white">
@@ -129,10 +128,15 @@ export default function Header() {
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon
+                        <img
+                          src={item.icon}
                           className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
                           aria-hidden="true"
                         />
+                        {/* <item.icon
+                          className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                          aria-hidden="true"
+                        /> */}
                       </div>
                       <div className="flex-auto">
                         <a

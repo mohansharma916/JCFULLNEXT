@@ -1,7 +1,7 @@
 const UpcomingTripsData = [
   {
     id: "BirBilling",
-    TripPhoto: "/media/manali.jpeg",
+    TripPhoto: "/media/bir2.jpg",
     FromLocation: "Delhi",
     Duration: "3N/4D",
     Triptitle: "Vietnam 8 Days Trip WIth FLight",
@@ -9,7 +9,7 @@ const UpcomingTripsData = [
   },
   {
     id: "Noida",
-    TripPhoto: "/media/agra.jpeg",
+    TripPhoto: "/media/taj.jpg",
     FromLocation: "AGRA",
     Duration: "3N/4D",
     Triptitle: "Vietnam 8 Days Trip WIth FLight",

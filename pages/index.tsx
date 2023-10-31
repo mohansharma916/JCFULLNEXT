@@ -21,7 +21,6 @@ export default function Home() {
       <Header />
       <div className="bg-white px-16 2xs:p-2">
         <HeroSection />
-
         <JoinUs />
         <Explore />
         <Services />

@@ -1,7 +1,10 @@
 const Notes = () => {
   return (
     <>
-      <div className="max-w-screen-xl mx-auto px-2.5 bg-white items-center mb-10 ">
+      <div
+        className="max-w-screen-xl border-1 
+border-gray-800 my-8 shadow-2xl p-2.5 mx-auto bg-white items-center mb-10 "
+      >
         <h3>Note:</h3>
         <p>
           Frequent factors such as weather, road circumstances, the physical
