@@ -2,11 +2,13 @@ import { useState } from "react";
 import { BiTimeFive } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import SelectDates from "@/src/components/BookNow/Modals/SelectDatesModal";
+import { LockClosedIcon } from "@heroicons/react/24/outline";
 
 const IconWithDetails = ({ duration, pickUpAndDrop, dates }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedDate, setSelectedDates] = useState();
   const [selectedMonth, setSelectedMonth] = useState();
+  const [buttonDisabled, setSubmitDisabled] = useState(true);
 
   const clickBookNow = () => {
     setShowModal(true);
@@ -17,6 +19,7 @@ const IconWithDetails = ({ duration, pickUpAndDrop, dates }) => {
   };
   const handleDateClick = (date) => {
     setSelectedDates(date);
+    setSubmitDisabled(false);
   };
 
   return (
@@ -92,11 +95,13 @@ const IconWithDetails = ({ duration, pickUpAndDrop, dates }) => {
                       Close
                     </button>
                     <button
-                      className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      className="bg-emerald-500  flex  gap-4 text-white disabled:opacity-25 active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                       type="button"
+                      disabled={buttonDisabled}
                       onClick={() => setShowModal(false)}
                     >
-                      Save Changes
+                      <LockClosedIcon className="h-6 w-6 text-white  group-hover:text-indigo-600" />
+                      Lock Dates
                     </button>
                   </div>
                 </div>

@@ -84,11 +84,7 @@ export default function Header() {
         <div className="flex xl:flex-1 lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Journey Capturer</span>
-            <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt=""
-            />
+            <img className="h-12 w-auto" src="/media/TJC.png" alt="" />
           </Link>
         </div>
         <div className="flex md:hidden sm:hidden xl:hidden lg:hidden">
@@ -240,11 +236,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
+              <img className="h-8 w-auto" src="/media/TJC.png" alt="" />
             </a>
             <button
               type="button"
