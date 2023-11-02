@@ -1,5 +1,6 @@
 import TourCard from "./Components/TourCard";
 import tourData from "./Components/TourData";
+import TripData from "../../Trips/TripData";
 import { useState } from "react";
 import ViewAll from "../../ViewAll";
 import { TripCategories } from "@/pages/trips";
@@ -25,7 +26,7 @@ const UpcomingTrips = () => {
         </div>
 
         <div className="mt-10 flex 2xs:mt-8 flex-wrap justify-center">
-          {tourData.map((trip) => (
+          {TripData.map((trip) => (
             <TourCard key={trip.id} tour={trip} />
           ))}
         </div>

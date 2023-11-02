@@ -44,7 +44,6 @@ const Trips = () => {
         <p>Domestic Trips</p>
       </div>
       {TripCategories.map((categorie) => (
-        // console.log("",categorie.tag),
         <AllTrips tags={categorie.tag} description={categorie.tagDescription} />
       ))}
       <Footer />

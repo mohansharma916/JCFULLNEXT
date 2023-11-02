@@ -1,6 +1,6 @@
 const UpcomingTripsData = [
   {
-    id: "BirBilling",
+    TripId: "BirBilling",
     TripPhoto: "/media/bir2.jpg",
     FromLocation: "Delhi",
     Duration: "3N/4D",
@@ -8,7 +8,7 @@ const UpcomingTripsData = [
     Dates: ["Dec", "Jan", "Feb", "Mar", "Apr"],
   },
   {
-    id: "Noida",
+    TripId: "Noida",
     TripPhoto: "/media/taj.jpg",
     FromLocation: "AGRA",
     Duration: "3N/4D",
@@ -16,7 +16,7 @@ const UpcomingTripsData = [
     Dates: ["Dec", "Jan", "Feb", "Mar", "Apr"],
   },
   {
-    id: "Banglore",
+    TripId: "Banglore",
     TripPhoto: "/media/manali.jpeg",
     FromLocation: "Banglore",
     Duration: "3N/4D",
@@ -24,7 +24,7 @@ const UpcomingTripsData = [
     Dates: ["Dec", "Jan", "Feb", "Mar", "Apr"],
   },
   {
-    id: "Chennai",
+    TripId: "Chennai",
     TripPhoto: "/media/manali.jpeg",
     FromLocation: "Chennai",
     Duration: "3N/4D",
@@ -32,7 +32,7 @@ const UpcomingTripsData = [
     Dates: ["Dec", "Jan", "Feb", "Mar", "Apr"],
   },
   {
-    id: "Pune",
+    TripId: "Pune",
     TripPhoto: "/media/manali.jpeg",
     FromLocation: "Pune",
     Duration: "3N/4D",
@@ -40,7 +40,7 @@ const UpcomingTripsData = [
     Dates: ["Dec", "Jan", "Feb", "Mar", "Apr"],
   },
   {
-    id: "Kolkata",
+    TripId: "Kolkata",
     TripPhoto: "/media/manali.jpeg",
     FromLocation: "Kolkata",
     Duration: "3N/4D",

@@ -230,7 +230,7 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-white w-2/5 h-60 rounded-md justify-center ml-10">
+            <div className="bg-white w-2/5 h-60 rounded-md text-2xl justify-center ml-10 px-6 py-2">
               Upcoming Trips
             </div>
           </div>

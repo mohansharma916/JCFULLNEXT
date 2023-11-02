@@ -16,9 +16,7 @@ import Link from "next/link";
 
 const TripPage = () => {
   const { id } = useParams();
-  const specificTrip = TripData.find((tr) => tr.id === id);
-  // console.log(specificTrip)
-
+  const specificTrip = TripData.find((tr) => tr.TripId === id);
   if (!specificTrip) {
     return notFound();
   }
