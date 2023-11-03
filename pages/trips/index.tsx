@@ -4,13 +4,14 @@ import AllTrips from "@/src/components/Trips/AllTrips";
 import HeaderImageContent from "@/src/components/Trips/HeaderImageContent";
 import Footer from "@/src/components/Footer";
 import Header from "@/src/components/Header";
+import { Toaster } from "react-hot-toast";
 
 export const TripCategories = [
-  {
-    tag: "Beaches",
-    tagDescription:
-      "Sun, sand, and sea lovers, our beach trips are designed for you. Whether it's a relaxing beach vacation or water sports and beach parties, we offer various options to soak up the beach vibes.",
-  },
+  // {
+  //   tag: "Beaches",
+  //   tagDescription:
+  //     "Sun, sand, and sea lovers, our beach trips are designed for you. Whether it's a relaxing beach vacation or water sports and beach parties, we offer various options to soak up the beach vibes.",
+  // },
   {
     tag: "Winter",
     tagDescription:
@@ -47,6 +48,7 @@ const Trips = () => {
         <AllTrips tags={categorie.tag} description={categorie.tagDescription} />
       ))}
       <Footer />
+      <Toaster />
     </>
   );
 };

@@ -60,7 +60,7 @@ const Footer = () => {
         //   name: "Languages",
         // },
         {
-          href: "/blogs",
+          href: "/#",
           name: "Blog",
         },
       ],

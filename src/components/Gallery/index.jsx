@@ -7,7 +7,7 @@ const Gallery = () => {
         <Subtitle subtitle={"Gallery"} />
         <p className="font-semibold my-5">Visit our customers tour gallery</p>
         <div className="flex gap-2">
-          <div class="container pb-4   bg-red-100 h-auto  mx-auto">
+          <div class="container pb-4 h-auto  mx-auto">
             <div class="-m-1 flex flex-wrap md:-m-2">
               <div class="flex w-1/2 flex-wrap">
                 <div class="w-1/2 p-1 md:p-2">
@@ -57,7 +57,7 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-          <div class="container pb-4   bg-red-100 h-auto  mx-auto">
+          <div class="container pb-4 h-auto  mx-auto">
             <div class="-m-1 flex flex-wrap md:-m-2">
               <div class="flex w-1/2 flex-wrap">
                 <div class="w-1/2 p-1 md:p-2">

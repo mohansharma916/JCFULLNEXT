@@ -3,6 +3,7 @@ import TourCard from "@/src/components/Explore/UpcomingTrips/Components/TourCard
 import tourData from "@/src/components/Explore/UpcomingTrips/Components/TourData";
 import { useState } from "react";
 import Subtitle from "../../subtitle";
+import toast, { Toaster } from "react-hot-toast";
 const AllTrips = ({ tags, description }) => {
   return (
     <>

@@ -21,13 +21,13 @@ import { useQuery } from "@apollo/client";
 import { GetUser } from "@/src/apollo/queries/auth";
 
 const products = [
-  {
-    name: "Beaches",
-    description:
-      "Relax on sunny shores, listen to the soothing waves, and play in the sand at beautiful beach spots.",
-    href: "#",
-    icon: "/media/sunset.png",
-  },
+  // {
+  //   name: "Beaches",
+  //   description:
+  //     "Relax on sunny shores, listen to the soothing waves, and play in the sand at beautiful beach spots.",
+  //   href: "#",
+  //   icon: "/media/sunset.png",
+  // },
   {
     name: "Mountains Trekking",
     description:
@@ -57,7 +57,7 @@ const products = [
   },
 ];
 const callsToAction = [
-  { name: "See All", href: "/trips", icon: PlayCircleIcon },
+  { name: "See All", href: "/#", icon: PlayCircleIcon },
   { name: "Request A Destination", href: "#", icon: PhoneIcon },
 ];
 
@@ -185,7 +185,7 @@ export default function Header() {
             Career
           </Link>
           <Link
-            href="/blogs"
+            href="/#"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Blogs

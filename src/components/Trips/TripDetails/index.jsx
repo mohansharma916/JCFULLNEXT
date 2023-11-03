@@ -4,19 +4,19 @@ import ContentDetails from "../../contentDetails";
 
 const Tripdetails = ({
   description,
-  itineary,
+  // itineary,
   dates,
   inclusion,
   exclusion,
 }) => {
   const tabItems = [
     "Description",
-    "Itineary",
+    // "Itineary",
     "Dates & Costing",
-    "Inclusion",
-    "Exclusion",
+    // "Inclusion",
+    // "Exclusion",
   ];
-  const [selectedItem, setSelectedItem] = useState(1);
+  const [selectedItem, setSelectedItem] = useState(0);
   return (
     <>
       <div
@@ -76,10 +76,10 @@ border-gray-800 my-8 shadow-2xl bg-white md:px-8"
         {/* <p>{dates.map((s) => console.log("sss", s))}</p> */}
         <div className="max-w-screen-xl mx-auto px-2.5 bg-white items-center  ">
           {selectedItem === 0 && <ContentDetails data={description} />}
-          {selectedItem === 1 && <ContentDetails data={itineary} />}
-          {selectedItem === 2 && <DatesCosting content={dates} />}
-          {selectedItem === 3 && <ContentDetails data={inclusion} />}
-          {selectedItem === 4 && <ContentDetails data={exclusion} />}
+          {/* {selectedItem === 1 && <ContentDetails data={itineary} />} */}
+          {selectedItem === 1 && <DatesCosting content={dates} />}
+          {/* {selectedItem === 2 && <ContentDetails data={inclusion} />} */}
+          {/* {selectedItem === 3 && <ContentDetails data={exclusion} />} */}
         </div>
       </div>
     </>
